@@ -1,9 +1,11 @@
+
 #include <stdio.h>
 
 int main()
 {
 	float num=0.12;
 	printf("%f",num);
+	getchar();
 //	int i=-1;
 //	printf("%d",i); 
 //	char *p="hello"; 

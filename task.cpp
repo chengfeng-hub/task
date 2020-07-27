@@ -9,13 +9,13 @@ using namespace std;
 template <class T>
 class Stack { 
   private: 
-    vector<T> elems;     // ÔªËØ 
+    vector<T> elems;     // å…ƒç´  
  
   public: 
-    void push(T const&);  // ÈëÕ»
-    void pop();               // ³öÕ»
-    T top() const;            // ·µ»ØÕ»¶¥ÔªËØ
-    bool empty() const{       // Èç¹ûÎª¿ÕÔò·µ»ØÕæ¡£
+    void push(T const&);  // å…¥æ ˆ
+    void pop();               // å‡ºæ ˆ
+    T top() const;            // è¿”å›æ ˆé¡¶å…ƒç´ 
+    bool empty() const{       // å¦‚æœä¸ºç©ºåˆ™è¿”å›çœŸã€‚
         return elems.empty(); 
     } 
 }; 
@@ -23,7 +23,7 @@ class Stack {
 template <class T>
 void Stack<T>::push (T const& elem) 
 { 
-    // ×·¼Ó´«ÈëÔªËØµÄ¸±±¾
+    // è¿½åŠ ä¼ å…¥å…ƒç´ çš„å‰¯æœ¬
     elems.push_back(elem);    
 } 
  
@@ -33,7 +33,7 @@ void Stack<T>::pop ()
     if (elems.empty()) { 
         throw out_of_range("Stack<>::pop(): empty stack"); 
     }
-    // É¾³ı×îºóÒ»¸öÔªËØ
+    // åˆ é™¤æœ€åä¸€ä¸ªå…ƒç´ 
     elems.pop_back();         
 } 
  
@@ -43,21 +43,21 @@ T Stack<T>::top () const
     if (elems.empty()) { 
         throw out_of_range("Stack<>::top(): empty stack"); 
     }
-    // ·µ»Ø×îºóÒ»¸öÔªËØµÄ¸±±¾ 
+    // è¿”å›æœ€åä¸€ä¸ªå…ƒç´ çš„å‰¯æœ¬ 
     return elems.back();      
 } 
  
 int main() 
 { 
     try { 
-        Stack<int>         intStack;  // int ÀàĞÍµÄÕ» 
-        Stack<string> stringStack;    // string ÀàĞÍµÄÕ» 
+        Stack<int>         intStack;  // int ç±»å‹çš„æ ˆ 
+        Stack<string> stringStack;    // string ç±»å‹çš„æ ˆ 
  
-        // ²Ù×÷ int ÀàĞÍµÄÕ» 
+        // æ“ä½œ int ç±»å‹çš„æ ˆ 
         intStack.push(7); 
         cout << intStack.top() <<endl; 
  
-        // ²Ù×÷ string ÀàĞÍµÄÕ» 
+        // æ“ä½œ string ç±»å‹çš„æ ˆ 
         stringStack.push("hello"); 
         cout << stringStack.top() << std::endl; 
         stringStack.pop(); 

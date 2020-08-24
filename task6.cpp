@@ -16,6 +16,7 @@ virtual void echo() {printf("Derived");}
   
 int main() {
 Base* base = new Derived();
+system("pause");
 //base->echo();
 //return 0;
 }

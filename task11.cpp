@@ -6,8 +6,8 @@ int main()
 int N;
 int &rN= N;
 N=1;
-cout<<"rNµÄÖµÎª:"<<rN<<endl;
-cout<<"&rNµÄÖµÎª£º"<<rN<<endl;
+cout<<"rNçš„å€¼ä¸º:"<<rN<<endl;
+cout<<"&rNçš„å€¼ä¸ºï¼š"<<rN<<endl;
  
  return 0;
 }

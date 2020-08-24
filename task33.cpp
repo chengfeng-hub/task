@@ -44,6 +44,7 @@ Complex Complex::operator++(double)
 int main()
 {
 	Complex c1(3,4),c2(5,-10),c3;
+	Complex *c=new Complex;
 	cout<<"c1=";
 	c1++;
 	c1.display();
